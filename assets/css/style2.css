@@ -1,0 +1,427 @@
+body {
+    margin: 0;
+    /* overflow-x: hidden; */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header {
+    position: relative;
+    max-width: 960px;
+    height: 220px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    margin: 0 auto;
+}
+
+.header a{
+    text-decoration: none;
+}
+.header h1 {
+    margin: 0;
+    padding-top: 40px;
+}
+
+nav{
+    position: absolute;
+    width: 400px;
+    bottom: 30px;
+    right: 0;
+    font-size: 20px;
+}
+
+ul{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.fade-line::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px; /* 下線の高さ */
+    background-color: #000; /* 下線の色 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* トランジションの設定 */
+  }
+
+  .fade-line:hover::before {
+    width: 100%;
+  }
+
+.social-button{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 100px;
+    color: black;
+}
+
+.social-button a{
+    color: black;
+}
+/* /////////////////////////////ここまでOK/////////////////////////////////////////////////////////////////////////////////////// */
+
+main {
+    max-width: 100%;
+    background-color: rgb(245, 241, 241);
+}
+
+.electric{
+    background-color:rgb(229, 225, 225); 
+    width: 100%;
+    height: 300px;
+    /* margin-top: 80px; */
+    font-style: italic;
+    /* border: 1px black solid; */
+}
+
+.electric h1{
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+    padding: 40px;
+    font-style: italic;
+}
+
+.type{
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+}
+
+.fade-line_1{
+    text-decoration: none;
+    color: black;
+    padding: 0 20px 0 20px;
+    white-space: nowrap;
+}
+
+.fade-line_1::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px; /* 下線の高さ */
+    background-color: #000; /* 下線の色 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* トランジションの設定 */
+  }
+
+  .fade-line_1:hover::before {
+    width: 100%;
+  }
+
+.electric h2{
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+}
+
+.container-electric{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* width: 50%; */
+    /* padding: 20px; */
+    /* margin: 0 auto; */
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 720px){
+    .electric h1{
+        font-size: 35px;
+    }
+    .electric h2{
+        font-size: 20px;
+    }
+    .type{
+        font-size: 15px
+    }
+}
+
+.kenjitsu{
+   background-color: rgb(229, 225, 225);
+   height: auto;
+}
+
+.kenjitsu p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+
+
+
+.kenjitsu h1{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.kenjitsu h2{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px
+}
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+}
+
+.slider img {
+    width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);/*左右の画像のサイズを80%に*/
+  transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+  transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+  opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
+}
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+.akogare{
+    background-color: rgb(229, 225, 225);
+    height: auto;
+}
+
+.akogare p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+.akogare h1{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.akogare h2{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px
+}
+
+.haisuinojin{
+    background-color: rgb(229, 225, 225);
+    height: auto;
+
+}
+
+.haisuinojin p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+.haisuinojin h1{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.haisuinojin h2{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px
+}
+
+
+
+.footer{
+    position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+    height: 150px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    display: block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+
+.footer-nav{
+    position: absolute;
+    width: 400px;
+    bottom: 30px;
+    left: 0;
+    font-size: 20px;
+}
+
+ul{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.fade-line::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px; /* 下線の高さ */
+    background-color: #000; /* 下線の色 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* トランジションの設定 */
+  }
+
+  .fade-line:hover::before {
+    width: 100%;
+  }
+
+  .copyright{
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+  }
+
+.toTop{
+    /* position: absolute; */
+    width: 100%;
+    /* transform: translate(50%,0); */
+}
+
+@media screen and (max-width: 970px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        position: absolute;
+        width: 400px;
+        bottom: 40px;
+        left:25px;
+        font-size: 15px;
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: 10px;
+        right: 50px;
+        font-size: 15px;
+    }
+
+}
